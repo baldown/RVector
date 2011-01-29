@@ -1,9 +1,12 @@
-package RVector;
+package Statistics::RVector;
 
 use strict;
 use warnings;
 use Carp ();
-use Exporter qw(import);
+
+require Exporter;
+
+our @ISA = qw(Exporter);
 
 use Math::Complex;
 
@@ -31,14 +34,24 @@ RVector - Mathematical/statistical vector implementation mimicking that of R sta
 The RVector class is a Perl implementation of the base R stats mathematical vector
 to enable better statistical/numerical/mathemetical analysis of data in Perl.
 
-=head1 SYNOPSIS
-
 The RVector class is a perl implementation of the base R stats language mathematical 
 vector to enable better statistical/numerical/mathematical analysis of data in Perl.
 This implementation is still very beta, but should work sufficiently for vector 
 arithmetic (+,-,*,/,**), as well as calculating sum(), mean(), var(), and sd(), which 
 are the sum of the values, the mean of the values, the variance of the sample, and 
 the standard deviation of the sample..
+
+=head1 SYNOPSIS
+
+	use Statistics::RVector;
+	my $x = rv(10.4, 5.6, 3.1, 6.4, 21.7);
+	my $y = Statistics::RVector->new($vector1,0,$vector1);
+	my $v = 2 * $x + $y + 1
+
+=head2 EXPORT
+
+Exports the function rv() by default, which is a shortened form of 
+Statistics::RVector->new().
 
 =head2 TODO
 
@@ -422,9 +435,17 @@ Josh Ballard E<lt>josh@oofle.comE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2010 Josh Ballard.  All rights reserved.  Released to the public under the GPLv2.
+Copyright (c) 2010 Josh Ballard.  
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.10.1 or,
+at your option, any later version of Perl 5 you may have available.
 
 =head1 SEE ALSO
+
+For more information about RVector, see http://code.oofle.com/ and follow 
+the link to RVector.  For more information about the R Stats programming 
+language, see http://r-project.org/.
 
 =cut
 
