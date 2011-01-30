@@ -125,18 +125,18 @@ will want to use.</p>
 <h2 class="pod_h2"><a name="vector_creation">Vector Creation</a></h2>
 <p>
 </p>
-<h3><a name="statistics__rvector__new____head3_rv__">Statistics::RVector-&gt;<code>new()</code>
+<h3 class="pod_h3"><a name="statistics__rvector__new____head3_rv__">Statistics::RVector-&gt;<code>new()</code>
 =head3 <code>rv()</code></a></h3>
 <p>Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
 vector containing 3 entries of 10, 17, and 24 in that order.</p>
 <p>
 </p>
-<h3><a name="_vector__add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></h3>
 <p>Adds a new entry to the vector in question, including an (optional) name to be added
 to the name table to fetch the value</p>
 <p>
 </p>
-<h3><a name="_vector__name__index_">$vector-&gt;<code>name($index)</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__name__index_">$vector-&gt;<code>name($index)</code></a></h3>
 <p>Returns the name of a given index in the vector, if given.</p>
 <p>
 </p>
@@ -146,12 +146,12 @@ These operations will result in either a modification to the existing vector, or
 the return of a new vector altogether.</p>
 <p>
 </p>
-<h3><a name="_vector__clone__">$vector-&gt;<code>clone()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__clone__">$vector-&gt;<code>clone()</code></a></h3>
 <p>Returns an exact copy of the original vector in different memory.
 Allows for modification without affecting the original vector.</p>
 <p>
 </p>
-<h3><a name="_vector__extend__len_">$vector-&gt;<code>extend($len)</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__extend__len_">$vector-&gt;<code>extend($len)</code></a></h3>
 <p>Extends the length of the given vector to length $len, filling all new values with 
 repeated values from the existing array in the same offsets.</p>
 <p>For example, an rv(1,2,3) that is extended to 8 will then be rv(1,2,3,1,2,3,1,2).</p>
@@ -163,66 +163,66 @@ They will return in most cases numerical values unless otherwise specified.  The
 do not in any way change the vector, nor create any new vectors.</p>
 <p>
 </p>
-<h3><a name="_vector__length__">$vector-&gt;<code>length()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__length__">$vector-&gt;<code>length()</code></a></h3>
 <p>Returns the integer length of the vector.</p>
 <p>
 </p>
-<h3><a name="_vector__range__">$vector-&gt;<code>range()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__range__">$vector-&gt;<code>range()</code></a></h3>
 <p>Returns a vector holding the largest and smallest values in the specified vector.</p>
 <p>
 </p>
-<h3><a name="_vector__max__">$vector-&gt;<code>max()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__max__">$vector-&gt;<code>max()</code></a></h3>
 <p>Returns the maximum value in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector__min__">$vector-&gt;<code>min()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__min__">$vector-&gt;<code>min()</code></a></h3>
 <p>Returns the minimum value in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector__sum__">$vector-&gt;<code>sum()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__sum__">$vector-&gt;<code>sum()</code></a></h3>
 <p>Returns the arithmetic sum of all entries in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector__prod__">$vector-&gt;<code>prod()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__prod__">$vector-&gt;<code>prod()</code></a></h3>
 <p>Returns the arithmetic product of all the entries in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector__mean__">$vector-&gt;<code>mean()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__mean__">$vector-&gt;<code>mean()</code></a></h3>
 <p>Returns the arithmetic mean of the vector values.</p>
 <p>
 </p>
-<h3><a name="_vector__var__">$vector-&gt;<code>var()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__var__">$vector-&gt;<code>var()</code></a></h3>
 <p>Returns the sample variance of the vector values.</p>
 <p>
 </p>
-<h3><a name="_vector__sd__">$vector-&gt;<code>sd()</code></a></h3>
+<h3 class="pod_h3"><a name="_vector__sd__">$vector-&gt;<code>sd()</code></a></h3>
 <p>Returns the sample standard deviation of the vector values.</p>
 <p>
 </p>
 <h2 class="pod_h2"><a name="dereferencing_arithmetic_overloads">DEREFERENCING/ARITHMETIC OVERLOADS</a></h2>
 <p>
 </p>
-<h3><a name="as_array__vector_"><code>as_array($vector)</code></a></h3>
+<h3 class="pod_h3"><a name="as_array__vector_"><code>as_array($vector)</code></a></h3>
 <p>Returns an array reference to the values in the vector.</p>
 <p>
 </p>
-<h3><a name="to_string__vector_"><code>to_string($vector)</code></a></h3>
+<h3 class="pod_h3"><a name="to_string__vector_"><code>to_string($vector)</code></a></h3>
 <p>Returns a pretty-printed string of the vector values</p>
 <p>
 </p>
-<h3><a name="vectoradd__val1__val2__switch_"><code>vectoradd($val1,$val2,$switch)</code></a></h3>
+<h3 class="pod_h3"><a name="vectoradd__val1__val2__switch_"><code>vectoradd($val1,$val2,$switch)</code></a></h3>
 <p>
 </p>
-<h3><a name="vectorsub__val1__val2__switch_"><code>vectorsub($val1,$val2,$switch)</code></a></h3>
+<h3 class="pod_h3"><a name="vectorsub__val1__val2__switch_"><code>vectorsub($val1,$val2,$switch)</code></a></h3>
 <p>
 </p>
-<h3><a name="vectormult__val1__val2__switch_"><code>vectormult($val1,$val2,$switch)</code></a></h3>
+<h3 class="pod_h3"><a name="vectormult__val1__val2__switch_"><code>vectormult($val1,$val2,$switch)</code></a></h3>
 <p>
 </p>
-<h3><a name="vectordiv__val1__val2__switch_"><code>vectordiv($val1,$val2,$switch)</code></a></h3>
+<h3 class="pod_h3"><a name="vectordiv__val1__val2__switch_"><code>vectordiv($val1,$val2,$switch)</code></a></h3>
 <p>
 </p>
-<h3><a name="vectorpower__val1__val2__switch_"><code>vectorpower($val1,$val2,$switch)</code></a></h3>
+<h3 class="pod_h3"><a name="vectorpower__val1__val2__switch_"><code>vectorpower($val1,$val2,$switch)</code></a></h3>
 <p>These are the functions called by the overloaded mathematical operators when interacting 
 with an RVector object.  These represent +, -, *, /, and ** respectively.  They take in 
 two objects to perform the arithmetic operations on and a value for whether the value 
