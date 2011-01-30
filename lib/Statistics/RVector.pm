@@ -27,12 +27,9 @@ use overload
 
 =head1 NAME
 
-RVector - Mathematical/statistical vector implementation mimicking that of R stats
+Statistics::RVector - Mathematical/statistical vector implementation mimicking that of R stats
 
 =head1 DESCRIPTION
-
-The RVector class is a Perl implementation of the base R stats mathematical vector
-to enable better statistical/numerical/mathemetical analysis of data in Perl.
 
 The RVector class is a perl implementation of the base R stats language mathematical 
 vector to enable better statistical/numerical/mathematical analysis of data in Perl.
@@ -67,7 +64,7 @@ will want to use.
 
 =head2 Vector Creation
 
-=head3 RVector->new(10,17,24) or rv(10,17,24)
+=head3 Statistics::RVector->new(10,17,24) or rv(10,17,24)
 
 Creates a new RVector object holding 3 entries of 10, 17, and 24 in that order.
 
@@ -89,7 +86,7 @@ sub new {
 
 sub rv {
     my (@entries) = @_;
-    return RVector->new(@entries);
+    return Statistics::RVector->new(@entries);
 }
 
 =head3 $vector->add_value($val,[$name])
