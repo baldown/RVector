@@ -3,4 +3,4 @@ Makefile.PL
 MANIFEST
 README
 t/RVector.t
-lib/RVector.pm
+lib/Statistics/RVector.pm
