@@ -65,6 +65,7 @@ will want to use.
 =head2 Vector Creation
 
 =head3 Statistics::RVector->new()
+
 =head3 rv()
 
 Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
