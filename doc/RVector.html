@@ -2,15 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>RVector Documentation</title>
+<title>Statistics::RVector Documentation</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rev="made" href="mailto:_www@b04.apple.com" />
+<link rev="made" href="mailto:root@localhost" />
 </head>
 
 <body style="background-color: white">
 
-<p><a name="__index__"></a></p>
+
 <!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
 
 <ul>
 
@@ -19,6 +21,7 @@
 	<li><a href="#synopsis">SYNOPSIS</a></li>
 	<ul>
 
+		<li><a href="#export">EXPORT</a></li>
 		<li><a href="#todo">TODO</a></li>
 	</ul>
 
@@ -28,30 +31,30 @@
 		<li><a href="#vector_creation">Vector Creation</a></li>
 		<ul>
 
-			<li><a href="#rvector_new_10_17_24__or_rv_10_17_24_">RVector-&gt;<code>new(10,17,24)</code> or <code>rv(10,17,24)</code></a></li>
-			<li><a href="#_vector_add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></li>
-			<li><a href="#_vector_name__index_">$vector-&gt;<code>name($index)</code></a></li>
+			<li><a href="#statistics__rvector__new__">Statistics::RVector-&gt;<code>new()</code></a></li>
+			<li><a href="#_vector__add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></li>
+			<li><a href="#_vector__name__index_">$vector-&gt;<code>name($index)</code></a></li>
 		</ul>
 
 		<li><a href="#vector_modification_duplication_operations">Vector Modification/Duplication Operations</a></li>
 		<ul>
 
-			<li><a href="#_vector_clone__">$vector-&gt;<code>clone()</code></a></li>
-			<li><a href="#_vector_extend__len_">$vector-&gt;<code>extend($len)</code></a></li>
+			<li><a href="#_vector__clone__">$vector-&gt;<code>clone()</code></a></li>
+			<li><a href="#_vector__extend__len_">$vector-&gt;<code>extend($len)</code></a></li>
 		</ul>
 
 		<li><a href="#vector_inspection_operations">Vector Inspection Operations</a></li>
 		<ul>
 
-			<li><a href="#_vector_length__">$vector-&gt;<code>length()</code></a></li>
-			<li><a href="#_vector_range__">$vector-&gt;<code>range()</code></a></li>
-			<li><a href="#_vector_max__">$vector-&gt;<code>max()</code></a></li>
-			<li><a href="#_vector_min__">$vector-&gt;<code>min()</code></a></li>
-			<li><a href="#_vector_sum__">$vector-&gt;<code>sum()</code></a></li>
-			<li><a href="#_vector_prod__">$vector-&gt;<code>prod()</code></a></li>
-			<li><a href="#_vector_mean__">$vector-&gt;<code>mean()</code></a></li>
-			<li><a href="#_vector_var__">$vector-&gt;<code>var()</code></a></li>
-			<li><a href="#_vector_sd__">$vector-&gt;<code>sd()</code></a></li>
+			<li><a href="#_vector__length__">$vector-&gt;<code>length()</code></a></li>
+			<li><a href="#_vector__range__">$vector-&gt;<code>range()</code></a></li>
+			<li><a href="#_vector__max__">$vector-&gt;<code>max()</code></a></li>
+			<li><a href="#_vector__min__">$vector-&gt;<code>min()</code></a></li>
+			<li><a href="#_vector__sum__">$vector-&gt;<code>sum()</code></a></li>
+			<li><a href="#_vector__prod__">$vector-&gt;<code>prod()</code></a></li>
+			<li><a href="#_vector__mean__">$vector-&gt;<code>mean()</code></a></li>
+			<li><a href="#_vector__var__">$vector-&gt;<code>var()</code></a></li>
+			<li><a href="#_vector__sd__">$vector-&gt;<code>sd()</code></a></li>
 		</ul>
 
 		<li><a href="#dereferencing_arithmetic_overloads">DEREFERENCING/ARITHMETIC OVERLOADS</a></li>
@@ -72,29 +75,39 @@
 	<li><a href="#copyright">COPYRIGHT</a></li>
 	<li><a href="#see_also">SEE ALSO</a></li>
 </ul>
+
+<hr name="index" />
+</div>
 <!-- INDEX END -->
 
-<hr />
 <p>
 </p>
 <h1><a name="name">NAME</a></h1>
-<p>RVector - Mathematical/statistical vector implementation mimicking that of R stats</p>
+<p>Statistics::RVector - Mathematical/statistical vector implementation mimicking that of R stats</p>
 <p>
 </p>
 <hr />
 <h1><a name="description">DESCRIPTION</a></h1>
-<p>The RVector class is a Perl implementation of the base R stats mathematical vector
-to enable better statistical/numerical/mathemetical analysis of data in Perl.</p>
+<p>The RVector class is a perl implementation of the base R stats language mathematical 
+vector to enable better statistical/numerical/mathematical analysis of data in Perl.
+This implementation is still very beta, but should work sufficiently for vector 
+arithmetic (+,-,*,/,**), as well as calculating <code>sum()</code>, <code>mean()</code>, <code>var()</code>, and <code>sd()</code>, which 
+are the sum of the values, the mean of the values, the variance of the sample, and 
+the standard deviation of the sample..</p>
 <p>
 </p>
 <hr />
 <h1><a name="synopsis">SYNOPSIS</a></h1>
-<p>The RVector class is a perl implementation of the base R stats language mathematical 
-vector to enable better statistical/numerical/mathematical analysis of data in Perl.
-This implementation is still very beta, but should work sufficiently for vector 
-arithmetic (+,-,*,/,**), as well as calculating sum(), mean(), var(), and sd(), which 
-are the sum of the values, the mean of the values, the variance of the sample, and 
-the standard deviation of the sample..</p>
+<pre>
+        use Statistics::RVector;
+        my $x = rv(10.4, 5.6, 3.1, 6.4, 21.7);
+        my $y = Statistics::RVector-&gt;new($vector1,0,$vector1);
+        my $v = 2 * $x + $y + 1</pre>
+<p>
+</p>
+<h2><a name="export">EXPORT</a></h2>
+<p>Exports the function <code>rv()</code> by default, which is a shortened form of 
+Statistics::RVector-&gt;<code>new()</code>.</p>
 <p>
 </p>
 <h2><a name="todo">TODO</a></h2>
@@ -112,16 +125,18 @@ will want to use.</p>
 <h2><a name="vector_creation">Vector Creation</a></h2>
 <p>
 </p>
-<h3><a name="rvector_new_10_17_24__or_rv_10_17_24_">RVector-&gt;<code>new(10,17,24)</code> or <code>rv(10,17,24)</code></a></h3>
-<p>Creates a new RVector object holding 3 entries of 10, 17, and 24 in that order.</p>
+<h3><a name="statistics__rvector__new____head3_rv__">Statistics::RVector-&gt;<code>new()</code>
+=head3 <code>rv()</code></a></h3>
+<p>Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
+vector containing 3 entries of 10, 17, and 24 in that order.</p>
 <p>
 </p>
-<h3><a name="_vector_add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></h3>
+<h3><a name="_vector__add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></h3>
 <p>Adds a new entry to the vector in question, including an (optional) name to be added
 to the name table to fetch the value</p>
 <p>
 </p>
-<h3><a name="_vector_name__index_">$vector-&gt;<code>name($index)</code></a></h3>
+<h3><a name="_vector__name__index_">$vector-&gt;<code>name($index)</code></a></h3>
 <p>Returns the name of a given index in the vector, if given.</p>
 <p>
 </p>
@@ -131,15 +146,15 @@ These operations will result in either a modification to the existing vector, or
 the return of a new vector altogether.</p>
 <p>
 </p>
-<h3><a name="_vector_clone__">$vector-&gt;<code>clone()</code></a></h3>
+<h3><a name="_vector__clone__">$vector-&gt;<code>clone()</code></a></h3>
 <p>Returns an exact copy of the original vector in different memory.
 Allows for modification without affecting the original vector.</p>
 <p>
 </p>
-<h3><a name="_vector_extend__len_">$vector-&gt;<code>extend($len)</code></a></h3>
+<h3><a name="_vector__extend__len_">$vector-&gt;<code>extend($len)</code></a></h3>
 <p>Extends the length of the given vector to length $len, filling all new values with 
 repeated values from the existing array in the same offsets.</p>
-<p>For example, an <code>rv(1,2,3)</code> that is extended to 8 will then be rv(1,2,3,1,2,3,1,2).</p>
+<p>For example, an rv(1,2,3) that is extended to 8 will then be rv(1,2,3,1,2,3,1,2).</p>
 <p>
 </p>
 <h2><a name="vector_inspection_operations">Vector Inspection Operations</a></h2>
@@ -148,39 +163,39 @@ They will return in most cases numerical values unless otherwise specified.  The
 do not in any way change the vector, nor create any new vectors.</p>
 <p>
 </p>
-<h3><a name="_vector_length__">$vector-&gt;<code>length()</code></a></h3>
+<h3><a name="_vector__length__">$vector-&gt;<code>length()</code></a></h3>
 <p>Returns the integer length of the vector.</p>
 <p>
 </p>
-<h3><a name="_vector_range__">$vector-&gt;<code>range()</code></a></h3>
+<h3><a name="_vector__range__">$vector-&gt;<code>range()</code></a></h3>
 <p>Returns a vector holding the largest and smallest values in the specified vector.</p>
 <p>
 </p>
-<h3><a name="_vector_max__">$vector-&gt;<code>max()</code></a></h3>
+<h3><a name="_vector__max__">$vector-&gt;<code>max()</code></a></h3>
 <p>Returns the maximum value in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector_min__">$vector-&gt;<code>min()</code></a></h3>
+<h3><a name="_vector__min__">$vector-&gt;<code>min()</code></a></h3>
 <p>Returns the minimum value in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector_sum__">$vector-&gt;<code>sum()</code></a></h3>
+<h3><a name="_vector__sum__">$vector-&gt;<code>sum()</code></a></h3>
 <p>Returns the arithmetic sum of all entries in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector_prod__">$vector-&gt;<code>prod()</code></a></h3>
+<h3><a name="_vector__prod__">$vector-&gt;<code>prod()</code></a></h3>
 <p>Returns the arithmetic product of all the entries in the vector.</p>
 <p>
 </p>
-<h3><a name="_vector_mean__">$vector-&gt;<code>mean()</code></a></h3>
+<h3><a name="_vector__mean__">$vector-&gt;<code>mean()</code></a></h3>
 <p>Returns the arithmetic mean of the vector values.</p>
 <p>
 </p>
-<h3><a name="_vector_var__">$vector-&gt;<code>var()</code></a></h3>
+<h3><a name="_vector__var__">$vector-&gt;<code>var()</code></a></h3>
 <p>Returns the sample variance of the vector values.</p>
 <p>
 </p>
-<h3><a name="_vector_sd__">$vector-&gt;<code>sd()</code></a></h3>
+<h3><a name="_vector__sd__">$vector-&gt;<code>sd()</code></a></h3>
 <p>Returns the sample standard deviation of the vector values.</p>
 <p>
 </p>
@@ -222,11 +237,17 @@ $switch is only relevant to subtraction, division, and power.</p>
 </p>
 <hr />
 <h1><a name="copyright">COPYRIGHT</a></h1>
-<p>Copyright (c) 2010 Josh Ballard.  All rights reserved.  Released to the public under the GPLv2.</p>
+<p>Copyright (c) 2010 Josh Ballard.</p>
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.10.1 or,
+at your option, any later version of Perl 5 you may have available.</p>
 <p>
 </p>
 <hr />
 <h1><a name="see_also">SEE ALSO</a></h1>
+<p>For more information about RVector, see <a href="http://code.oofle.com/">http://code.oofle.com/</a> and follow 
+the link to RVector.  For more information about the R Stats programming 
+language, see <a href="http://r-project.org/.">http://r-project.org/.</a></p>
 
 </body>
 

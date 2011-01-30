@@ -64,9 +64,11 @@ will want to use.
 
 =head2 Vector Creation
 
-=head3 Statistics::RVector->new(10,17,24) or rv(10,17,24)
+=head3 Statistics::RVector->new()
+=head3 rv()
 
-Creates a new RVector object holding 3 entries of 10, 17, and 24 in that order.
+Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
+vector containing 3 entries of 10, 17, and 24 in that order.
 
 =cut
 
