@@ -82,12 +82,12 @@
 
 <p>
 </p>
-<h1><a name="name">NAME</a></h1>
+<h1 class="pod_h1"><a name="name">NAME</a></h1>
 <p>Statistics::RVector - Mathematical/statistical vector implementation mimicking that of R stats</p>
 <p>
 </p>
 <hr />
-<h1><a name="description">DESCRIPTION</a></h1>
+<h1 class="pod_h1"><a name="description">DESCRIPTION</a></h1>
 <p>The RVector class is a perl implementation of the base R stats language mathematical 
 vector to enable better statistical/numerical/mathematical analysis of data in Perl.
 This implementation is still very beta, but should work sufficiently for vector 
@@ -97,7 +97,7 @@ the standard deviation of the sample..</p>
 <p>
 </p>
 <hr />
-<h1><a name="synopsis">SYNOPSIS</a></h1>
+<h1 class="pod_h1"><a name="synopsis">SYNOPSIS</a></h1>
 <pre>
         use Statistics::RVector;
         my $x = rv(10.4, 5.6, 3.1, 6.4, 21.7);
@@ -105,12 +105,12 @@ the standard deviation of the sample..</p>
         my $v = 2 * $x + $y + 1</pre>
 <p>
 </p>
-<h2><a name="export">EXPORT</a></h2>
+<h2 class="pod_h2"><a name="export">EXPORT</a></h2>
 <p>Exports the function <code>rv()</code> by default, which is a shortened form of 
 Statistics::RVector-&gt;<code>new()</code>.</p>
 <p>
 </p>
-<h2><a name="todo">TODO</a></h2>
+<h2 class="pod_h2"><a name="todo">TODO</a></h2>
 <p>* Handle non-numerical and/or invalid (i.e. division by zero) cases in all 
 functions.</p>
 <p>* Add support for naming of entries in the vector.</p>
@@ -119,10 +119,10 @@ will want to use.</p>
 <p>
 </p>
 <hr />
-<h1><a name="methods">METHODS</a></h1>
+<h1 class="pod_h1"><a name="methods">METHODS</a></h1>
 <p>
 </p>
-<h2><a name="vector_creation">Vector Creation</a></h2>
+<h2 class="pod_h2"><a name="vector_creation">Vector Creation</a></h2>
 <p>
 </p>
 <h3><a name="statistics__rvector__new____head3_rv__">Statistics::RVector-&gt;<code>new()</code>
@@ -140,7 +140,7 @@ to the name table to fetch the value</p>
 <p>Returns the name of a given index in the vector, if given.</p>
 <p>
 </p>
-<h2><a name="vector_modification_duplication_operations">Vector Modification/Duplication Operations</a></h2>
+<h2 class="pod_h2"><a name="vector_modification_duplication_operations">Vector Modification/Duplication Operations</a></h2>
 <p>Below are functions which allow for modification and/or duplication of a vector.
 These operations will result in either a modification to the existing vector, or 
 the return of a new vector altogether.</p>
@@ -157,7 +157,7 @@ repeated values from the existing array in the same offsets.</p>
 <p>For example, an rv(1,2,3) that is extended to 8 will then be rv(1,2,3,1,2,3,1,2).</p>
 <p>
 </p>
-<h2><a name="vector_inspection_operations">Vector Inspection Operations</a></h2>
+<h2 class="pod_h2"><a name="vector_inspection_operations">Vector Inspection Operations</a></h2>
 <p>Below are the various operations that you can perform on a single vector object.
 They will return in most cases numerical values unless otherwise specified.  They
 do not in any way change the vector, nor create any new vectors.</p>
@@ -199,7 +199,7 @@ do not in any way change the vector, nor create any new vectors.</p>
 <p>Returns the sample standard deviation of the vector values.</p>
 <p>
 </p>
-<h2><a name="dereferencing_arithmetic_overloads">DEREFERENCING/ARITHMETIC OVERLOADS</a></h2>
+<h2 class="pod_h2"><a name="dereferencing_arithmetic_overloads">DEREFERENCING/ARITHMETIC OVERLOADS</a></h2>
 <p>
 </p>
 <h3><a name="as_array__vector_"><code>as_array($vector)</code></a></h3>
@@ -231,12 +231,12 @@ $switch is only relevant to subtraction, division, and power.</p>
 <p>
 </p>
 <hr />
-<h1><a name="author">AUTHOR</a></h1>
+<h1 class="pod_h1"><a name="author">AUTHOR</a></h1>
 <p>Josh Ballard &lt;<a href="mailto:josh@oofle.com">josh@oofle.com</a>&gt;</p>
 <p>
 </p>
 <hr />
-<h1><a name="copyright">COPYRIGHT</a></h1>
+<h1 class="pod_h1"><a name="copyright">COPYRIGHT</a></h1>
 <p>Copyright (c) 2010 Josh Ballard.</p>
 <p>This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.1 or,
@@ -244,7 +244,7 @@ at your option, any later version of Perl 5 you may have available.</p>
 <p>
 </p>
 <hr />
-<h1><a name="see_also">SEE ALSO</a></h1>
+<h1 class="pod_h1"><a name="see_also">SEE ALSO</a></h1>
 <p>For more information about RVector, see <a href="http://code.oofle.com/">http://code.oofle.com/</a> and follow 
 the link to RVector.  For more information about the R Stats programming 
 language, see <a href="http://r-project.org/.">http://r-project.org/.</a></p>
