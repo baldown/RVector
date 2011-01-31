@@ -62,7 +62,7 @@ will want to use.
 
 =head1 METHODS
 
-=head2 Vector Creation
+=head2 VECTOR CREATION 
 
 =head3 Statistics::RVector->new() / rv()
 
@@ -126,7 +126,7 @@ sub name {
     return $self->{names}->[$i];
 }
 
-=head2 Vector Modification/Duplication Operations
+=head2 VECTOR MODIFICATION/DUPLICATION OPERATIONS
 
 Below are functions which allow for modification and/or duplication of a vector.
 These operations will result in either a modification to the existing vector, or 
@@ -168,7 +168,7 @@ sub extend {
     return 1;
 }
 
-=head2 Vector Inspection Operations
+=head2 VECTOR INSPECTION OPERATIONS
 
 Below are the various operations that you can perform on a single vector object.
 They will return in most cases numerical values unless otherwise specified.  They
