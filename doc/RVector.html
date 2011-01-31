@@ -19,20 +19,15 @@
 	<li><a href="#name">NAME</a></li>
 	<li><a href="#description">DESCRIPTION</a></li>
 	<li><a href="#synopsis">SYNOPSIS</a></li>
-	<ul>
-
-		<li><a href="#export">EXPORT</a></li>
-		<li><a href="#todo">TODO</a></li>
-	</ul>
-
+	<li><a href="#export">EXPORT</a></li>
+	<li><a href="#todo">TODO</a></li>
 	<li><a href="#methods">METHODS</a></li>
 	<ul>
 
 		<li><a href="#vector_creation">Vector Creation</a></li>
 		<ul>
 
-			<li><a href="#statistics__rvector__new__">Statistics::RVector-&gt;<code>new()</code></a></li>
-			<li><a href="#rv__"><code>rv()</code></a></li>
+			<li><a href="#statistics__rvector__new_____rv__">Statistics::RVector-&gt;<code>new()</code> / <code>rv()</code></a></li>
 			<li><a href="#_vector__add_value__val___name__">$vector-&gt;<code>add_value($val,[$name])</code></a></li>
 			<li><a href="#_vector__name__index_">$vector-&gt;<code>name($index)</code></a></li>
 		</ul>
@@ -106,12 +101,14 @@ the standard deviation of the sample..</p>
         my $v = 2 * $x + $y + 1</pre>
 <p>
 </p>
-<h2 class="pod_h2"><a name="export">EXPORT</a></h2>
+<hr />
+<h1 class="pod_h1"><a name="export">EXPORT</a></h1>
 <p>Exports the function <code>rv()</code> by default, which is a shortened form of 
 Statistics::RVector-&gt;<code>new()</code>.</p>
 <p>
 </p>
-<h2 class="pod_h2"><a name="todo">TODO</a></h2>
+<hr />
+<h1 class="pod_h1"><a name="todo">TODO</a></h1>
 <p>* Handle non-numerical and/or invalid (i.e. division by zero) cases in all 
 functions.</p>
 <p>* Add support for naming of entries in the vector.</p>
@@ -126,10 +123,7 @@ will want to use.</p>
 <h2 class="pod_h2"><a name="vector_creation">Vector Creation</a></h2>
 <p>
 </p>
-<h3 class="pod_h3"><a name="statistics__rvector__new__">Statistics::RVector-&gt;<code>new()</code></a></h3>
-<p>
-</p>
-<h3 class="pod_h3"><a name="rv__"><code>rv()</code></a></h3>
+<h3 class="pod_h3"><a name="statistics__rvector__new_____rv__">Statistics::RVector-&gt;<code>new()</code> / <code>rv()</code></a></h3>
 <p>Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
 vector containing 3 entries of 10, 17, and 24 in that order.</p>
 <p>

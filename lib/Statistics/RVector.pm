@@ -45,12 +45,12 @@ the standard deviation of the sample..
 	my $y = Statistics::RVector->new($vector1,0,$vector1);
 	my $v = 2 * $x + $y + 1
 
-=head2 EXPORT
+=head1 EXPORT
 
 Exports the function rv() by default, which is a shortened form of 
 Statistics::RVector->new().
 
-=head2 TODO
+=head1 TODO
 
 * Handle non-numerical and/or invalid (i.e. division by zero) cases in all 
 functions.
@@ -64,9 +64,7 @@ will want to use.
 
 =head2 Vector Creation
 
-=head3 Statistics::RVector->new()
-
-=head3 rv()
+=head3 Statistics::RVector->new() / rv()
 
 Creates a new RVector object.  For example, syntax of rv(10,17,24) would create a 
 vector containing 3 entries of 10, 17, and 24 in that order.
